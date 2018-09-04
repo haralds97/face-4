@@ -8,6 +8,8 @@ import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
+import SignIn from './Components/SignIn/SignIn';
+
 
 const app = new Clarifai.App({
  apiKey: '66c26976e675482eaa843e8fc6b634ca'
@@ -60,6 +62,7 @@ class App extends Component {
       <div>
         <Particles className="particles"/>
         <Navigation />
+        <SignIn />
         <Logo />
         <Rank />
         <ImageLinkForm 
