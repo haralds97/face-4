@@ -1,13 +1,17 @@
 import React from 'react';
 
-const SignIn = ({ onRouteChange }) => {
+const Register = ({ onRouteChange }) => {
     return (
       <div className="center">
         <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
-          <main className=" pa4 black-80">
+          <main className="pa4 black-80">
             <div className="measure ">
               <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                <legend className="f2 fw6 ph0 mh0 center">Sign In</legend>
+                <legend className="f2 fw6 ph0 mh0 center">Register</legend>
+                <div className="mt3">
+                  <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
+                  <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="name" name="name"  id="name" />
+                </div>
                 <div className="mt3">
                   <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                   <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address" />
@@ -19,13 +23,8 @@ const SignIn = ({ onRouteChange }) => {
               </fieldset>
               <div className="center">
                 <input 
-                	onClick={() => onRouteChange('home')}
-                	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" />
-              </div>
-              <div className="lh-copy mt3 center">
-                <p 
-                	onClick={() => onRouteChange('Register')}
-                	className="f5 link dim black db pointer underline ">Register</p>
+                  onClick={() => onRouteChange('home')}
+                  className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register" />
               </div>
             </div>
           </main>
@@ -34,4 +33,4 @@ const SignIn = ({ onRouteChange }) => {
     );
 }
 
-export default SignIn;
+export default Register;
